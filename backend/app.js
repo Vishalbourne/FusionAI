@@ -29,7 +29,7 @@ app.use(morgan('dev'));
 
 // Allow cross-origin requests
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:process.env.FRONTEND_URL,
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 }));
 
