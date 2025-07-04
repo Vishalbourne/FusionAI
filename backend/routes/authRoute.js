@@ -31,7 +31,8 @@ router.get(
     const profilePicture = user.profilePicture?.toString("utf-8");
 
 
-     const redirectUrl = `http://localhost:5173/oauth-success?token=${token}&id=${user._id}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&profilePicture=${encodeURIComponent(profilePicture)}`;
+     const redirectUrl = `${process.env.FRONTEND_URL}/oauth-success?token=${token}&id=${user._id}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&profilePicture=${encodeURIComponent(profilePicture)}`;
+
 
     res.redirect(redirectUrl);
 
@@ -62,7 +63,8 @@ router.get(
     const profilePicture = user.profilePicture?.toString("utf-8");
 
 
-     const redirectUrl = `http://localhost:5173/oauth-success?token=${token}&id=${user._id}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&profilePicture=${encodeURIComponent(profilePicture)}`;
+     const redirectUrl = `${process.env.FRONTEND_URL}/oauth-success?token=${token}&id=${user._id}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&profilePicture=${encodeURIComponent(profilePicture)}`;
+
 
     res.redirect(redirectUrl);
   }
